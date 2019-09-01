@@ -1,7 +1,7 @@
 object Scala_01 {
   class Outer{
     class Mider{
-      private def f(){}//只能在该类中访问
+      private def f(){}//只能在该类中访问（在类中定义的函数即是方法）
       printf("f")
       class Inner{
         f()
@@ -30,6 +30,11 @@ object Scala_01 {
     (new Inner).f() // 正确因为 f() 是 public
   }
 
+  def add(a:Int,b:Int):Int={//add function
+   var sum:Int=0
+   sum=a+b
+   sum
+  }
 
 
  def main(args:Array[String]):Unit= {
